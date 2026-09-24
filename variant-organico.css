@@ -1,0 +1,169 @@
+:root {
+  --ink: #3a3226;
+  --paper: #faf6ee;
+  --sage: #8a9468;
+  --clay: #b9683f;
+  --line: #e2dac6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+h1, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  overflow: hidden;
+}
+
+.branch {
+  position: absolute;
+  width: 90px;
+  height: auto;
+  color: var(--sage);
+  opacity: 0.55;
+}
+
+.branch-left { left: 3%; top: 0; }
+.branch-right { right: 3%; bottom: 0; }
+
+@media (max-width: 640px) {
+  .branch { width: 50px; }
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--clay);
+  margin-bottom: 1.2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
+  font-style: italic;
+  margin: 0;
+}
+
+.amp { color: var(--clay); }
+
+.hero .date {
+  margin-top: 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+#countdown {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.3rem;
+}
+
+#countdown div { text-align: center; }
+#countdown span {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-top: 0.3rem;
+}
+
+.section {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem;
+  text-align: center;
+}
+
+.section.muted { background: #f2edda; max-width: 100%; }
+.section.muted > * { max-width: 640px; margin-left: auto; margin-right: auto; }
+
+.cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.8rem 2rem;
+  min-width: 220px;
+  max-width: 300px;
+  background: #fffdf9;
+}
+
+.card h3 { margin: 0 0 0.5rem; font-size: 1.5rem; }
+.card .time { color: var(--clay); }
+.card a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: var(--sage);
+  text-decoration: none;
+  border-bottom: 1px solid var(--sage);
+}
+
+.prose { font-size: 1.05rem; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 400px;
+  margin: 2rem auto 0;
+}
+
+form input, form select, form textarea {
+  border: 1px solid var(--line);
+  background: #fffdf9;
+  border-radius: 6px;
+  padding: 0.7rem 0.9rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+form input:focus, form select:focus, form textarea:focus {
+  outline: none;
+  border-color: var(--sage);
+}
+
+form button {
+  padding: 0.8rem;
+  background: var(--sage);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover { background: var(--clay); }
+
+footer {
+  text-align: center;
+  padding: 3.5rem 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--ink);
+}

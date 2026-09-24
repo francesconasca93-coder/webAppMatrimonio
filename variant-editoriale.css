@@ -1,0 +1,147 @@
+:root {
+  --ink: #1c1a17;
+  --paper: #fbf9f5;
+  --line: #d8d2c4;
+  --accent: #a15c3d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+h1, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.75rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 10vw, 6rem);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.amp {
+  font-style: italic;
+  color: var(--accent);
+  font-size: 0.6em;
+}
+
+.hero .date {
+  margin-top: 2rem;
+  letter-spacing: 0.15em;
+  font-size: 1rem;
+}
+
+#countdown {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2.5rem;
+  font-size: 1.4rem;
+}
+
+#countdown div { text-align: center; }
+#countdown span {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 0.3rem;
+}
+
+.section {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.row h3 { margin: 0 0 0.4rem; font-size: 1.6rem; }
+.row p { margin: 0.2rem 0; }
+.row a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+.prose { font-size: 1.05rem; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-top: 2.5rem;
+}
+
+form input, form select, form textarea {
+  border: none;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  padding: 0.6rem 0.2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+form input:focus, form select:focus, form textarea:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+}
+
+form button {
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  background: none;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+form button:hover { background: var(--ink); color: var(--paper); }
+
+footer {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+}

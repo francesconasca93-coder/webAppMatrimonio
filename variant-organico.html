@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francesco & Valentina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="variant-organico.css">
+</head>
+<body>
+
+<header class="hero">
+  <svg class="branch branch-left" viewBox="0 0 120 300" fill="none" stroke="currentColor" stroke-width="1.2">
+    <path d="M60 300 C 55 220, 65 180, 55 120 C 48 80, 60 40, 55 0" />
+    <ellipse cx="55" cy="150" rx="6" ry="16" transform="rotate(-20 55 150)"/>
+    <ellipse cx="52" cy="190" rx="6" ry="16" transform="rotate(25 52 190)"/>
+    <ellipse cx="58" cy="90" rx="5" ry="14" transform="rotate(-15 58 90)"/>
+    <ellipse cx="53" cy="50" rx="5" ry="14" transform="rotate(20 53 50)"/>
+  </svg>
+
+  <p class="label">Ci sposiamo</p>
+  <h1>Francesco <span class="amp">&</span> Valentina</h1>
+  <p class="date">22 Maggio 2027</p>
+  <div id="countdown"></div>
+
+  <svg class="branch branch-right" viewBox="0 0 120 300" fill="none" stroke="currentColor" stroke-width="1.2">
+    <path d="M60 0 C 65 80, 55 120, 65 180 C 72 220, 60 260, 65 300" />
+    <ellipse cx="65" cy="150" rx="6" ry="16" transform="rotate(20 65 150)"/>
+    <ellipse cx="68" cy="110" rx="6" ry="16" transform="rotate(-25 68 110)"/>
+    <ellipse cx="62" cy="220" rx="5" ry="14" transform="rotate(15 62 220)"/>
+    <ellipse cx="67" cy="260" rx="5" ry="14" transform="rotate(-20 67 260)"/>
+  </svg>
+</header>
+
+<section class="section">
+  <p class="label">Dove e quando</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Cerimonia</h3>
+      <p>Santuario Santa Maria di Colonna</p>
+      <p class="time">Ore 11:00</p>
+      <a href="https://www.google.com/maps/place/Santuario+Santa+Maria+di+Colonna/@41.2707914,16.441639,788m/data=!3m2!1e3!4b1!4m6!3m5!1s0x13380798b709d1d1:0x453e2282026815b8!8m2!3d41.2707914!4d16.441639!16s%2Fg%2F11kg1xhnph" target="_blank">Mappa</a>
+    </div>
+    <div class="card">
+      <h3>Ricevimento</h3>
+      <p>Corte Bracco dei Germani</p>
+      <p class="time">A seguire, dopo la cerimonia</p>
+      <a href="https://www.google.com/maps/place/Corte+Bracco+dei+Germani/@41.1460621,16.4250856,790m/data=!3m2!1e3!4b1!4m6!3m5!1s0x13380eb84b1d6d09:0x7497c1064ea3d9a4!8m2!3d41.1460581!4d16.4276605!16s%2Fg%2F11bv1n93_r" target="_blank">Mappa</a>
+    </div>
+  </div>
+</section>
+
+<section class="section muted">
+  <p class="label">Dress code</p>
+  <p class="prose">Elegante. Evitate il bianco e i pastelli troppo chiari.</p>
+</section>
+
+<section class="section">
+  <p class="label">RSVP</p>
+  <p class="prose">Confermate la presenza entro il 22 aprile 2027.</p>
+  <form id="rsvp-form" action="YOUR_APPS_SCRIPT_WEB_APP_URL" method="POST">
+    <input type="text" name="nome" placeholder="Nome e cognome" required>
+    <select name="presenza" required>
+      <option value="">Sarai presente?</option>
+      <option value="si">Sì</option>
+      <option value="no">No</option>
+    </select>
+    <input type="number" name="accompagnatori" placeholder="Accompagnatori" min="0">
+    <textarea name="note" placeholder="Intolleranze alimentari / note"></textarea>
+    <button type="submit">Invia</button>
+  </form>
+  <p id="rsvp-thanks" hidden>Grazie.</p>
+</section>
+
+<footer>
+  <p>Francesco & Valentina</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
