@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francesco & Valentina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="variant-editoriale.css">
+</head>
+<body>
+
+<header class="hero">
+  <p class="label">Ci sposiamo</p>
+  <h1>Francesco<br><span class="amp">&</span><br>Valentina</h1>
+  <p class="date">22 Maggio 2027</p>
+  <div id="countdown"></div>
+</header>
+
+<hr>
+
+<section class="section">
+  <p class="label">Dove e quando</p>
+  <div class="rows">
+    <div class="row">
+      <h3>Cerimonia</h3>
+      <p>Santuario Santa Maria di Colonna</p>
+      <p>Ore 11:00</p>
+      <a href="https://www.google.com/maps/place/Santuario+Santa+Maria+di+Colonna/@41.2707914,16.441639,788m/data=!3m2!1e3!4b1!4m6!3m5!1s0x13380798b709d1d1:0x453e2282026815b8!8m2!3d41.2707914!4d16.441639!16s%2Fg%2F11kg1xhnph" target="_blank">Mappa</a>
+    </div>
+    <div class="row">
+      <h3>Ricevimento</h3>
+      <p>Corte Bracco dei Germani</p>
+      <p>A seguire, dopo la cerimonia</p>
+      <a href="https://www.google.com/maps/place/Corte+Bracco+dei+Germani/@41.1460621,16.4250856,790m/data=!3m2!1e3!4b1!4m6!3m5!1s0x13380eb84b1d6d09:0x7497c1064ea3d9a4!8m2!3d41.1460581!4d16.4276605!16s%2Fg%2F11bv1n93_r" target="_blank">Mappa</a>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <p class="label">Dress code</p>
+  <p class="prose">Elegante. Evitate il bianco e i pastelli troppo chiari.</p>
+</section>
+
+<hr>
+
+<section class="section">
+  <p class="label">RSVP</p>
+  <p class="prose">Confermate la presenza entro il 22 aprile 2027.</p>
+  <form id="rsvp-form" action="YOUR_APPS_SCRIPT_WEB_APP_URL" method="POST">
+    <input type="text" name="nome" placeholder="Nome e cognome" required>
+    <select name="presenza" required>
+      <option value="">Sarai presente?</option>
+      <option value="si">Sì</option>
+      <option value="no">No</option>
+    </select>
+    <input type="number" name="accompagnatori" placeholder="Accompagnatori" min="0">
+    <textarea name="note" placeholder="Intolleranze alimentari / note"></textarea>
+    <button type="submit">Invia</button>
+  </form>
+  <p id="rsvp-thanks" hidden>Grazie.</p>
+</section>
+
+<footer>
+  <p>Francesco & Valentina</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

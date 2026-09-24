@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout foto — esempi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .demo-label {
+    text-align: center;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.6rem;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+  }
+  .photo-sepia { filter: sepia(0.4) saturate(0.75) brightness(1.02); }
+
+  /* 1. Cammeo */
+  .cameo-wrap { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .cameo-wrap svg { width: 40px; height: 90px; color: var(--sage); opacity: 0.6; }
+  .cameo-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid var(--paper); box-shadow: 0 0 0 1px var(--sage); }
+
+  /* 2. Arco */
+  .arch-frame { width: 260px; margin: 2rem auto 0.5rem; overflow: hidden; border-radius: 130px 130px 6px 6px; border: 1px solid var(--line); }
+  .arch-frame img { width: 100%; height: 340px; object-fit: cover; display: block; }
+
+  /* 3. Larga */
+  .wide-frame { position: relative; max-width: 600px; margin: 2rem auto 0; }
+  .wide-frame img { width: 100%; height: 280px; object-fit: cover; border: 1px solid var(--line); display: block; }
+  .wide-frame .corner { position: absolute; width: 34px; height: 70px; color: var(--sage); opacity: 0.6; }
+  .wide-frame .corner.tl { top: -20px; left: -20px; }
+  .wide-frame .corner.tr { top: -20px; right: -20px; transform: scaleX(-1); }
+
+  /* 4. Split editoriale */
+  .split { display: flex; max-width: 780px; margin: 2rem auto 0; align-items: center; gap: 2.5rem; text-align: left; }
+  .split img { width: 45%; height: 320px; object-fit: cover; }
+  .split .text { flex: 1; }
+  .split .text .label { margin-bottom: 0.8rem; }
+  @media (max-width: 700px) { .split { flex-direction: column; text-align: center; } .split img { width: 80%; } }
+</style>
+</head>
+<body>
+
+<p class="demo-label">1 — Cammeo sopra i nomi</p>
+<section class="section" style="padding-top:3rem;">
+  <div class="cameo-wrap">
+    <svg viewBox="0 0 40 90" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 88 C 18 65,22 50,19 25 C 17 12,21 5,20 2"/><ellipse cx="19" cy="42" rx="4" ry="10" transform="rotate(-22 19 42)"/><ellipse cx="21" cy="60" rx="4" ry="10" transform="rotate(24 21 60)"/></svg>
+    <img class="cameo-img photo-sepia" src="https://picsum.photos/seed/wedding1/300/300" alt="">
+    <svg viewBox="0 0 40 90" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 88 C 22 65,18 50,21 25 C 23 12,19 5,20 2"/><ellipse cx="21" cy="42" rx="4" ry="10" transform="rotate(22 21 42)"/><ellipse cx="19" cy="60" rx="4" ry="10" transform="rotate(-24 19 60)"/></svg>
+  </div>
+  <p class="label">Ci sposiamo</p>
+  <h1 style="font-size:2.5rem;">Francesco & Valentina</h1>
+  <p class="date">22 Maggio 2027</p>
+</section>
+
+<p class="demo-label">2 — Sezione dedicata ad arco</p>
+<section class="section" style="padding-top:3rem;">
+  <p class="label">Ci sposiamo</p>
+  <h1 style="font-size:2.5rem;">Francesco & Valentina</h1>
+  <p class="date">22 Maggio 2027</p>
+  <div class="arch-frame"><img class="photo-sepia" src="https://picsum.photos/seed/wedding2/400/600" alt=""></div>
+  <svg viewBox="0 0 40 90" fill="none" stroke="currentColor" stroke-width="1.3" style="width:32px;height:60px;color:var(--sage);opacity:0.6;margin-top:0.5rem;"><path d="M20 88 C 18 65,22 50,19 25 C 17 12,21 5,20 2"/><ellipse cx="19" cy="42" rx="4" ry="10" transform="rotate(-22 19 42)"/></svg>
+  <p class="prose" style="font-style:italic;">"Da questo giorno, per sempre."</p>
+</section>
+
+<p class="demo-label">3 — Foto larga con cornice sottile</p>
+<section class="section" style="padding-top:3rem;">
+  <p class="label">Ci sposiamo</p>
+  <h1 style="font-size:2.5rem;">Francesco & Valentina</h1>
+  <p class="date">22 Maggio 2027</p>
+  <div class="wide-frame">
+    <svg class="corner tl" viewBox="0 0 40 90" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 88 C 18 65,22 50,19 25 C 17 12,21 5,20 2"/><ellipse cx="19" cy="42" rx="4" ry="10" transform="rotate(-22 19 42)"/></svg>
+    <img class="photo-sepia" src="https://picsum.photos/seed/wedding3/900/500" alt="">
+    <svg class="corner tr" viewBox="0 0 40 90" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 88 C 18 65,22 50,19 25 C 17 12,21 5,20 2"/><ellipse cx="19" cy="42" rx="4" ry="10" transform="rotate(-22 19 42)"/></svg>
+  </div>
+</section>
+
+<p class="demo-label">4 — Split editoriale (foto + testo affiancati)</p>
+<section class="section" style="padding-top:3rem;">
+  <div class="split">
+    <img class="photo-sepia" src="https://picsum.photos/seed/wedding4/500/700" alt="">
+    <div class="text">
+      <p class="label">Ci sposiamo</p>
+      <h1 style="font-size:2.5rem;">Francesco & Valentina</h1>
+      <p class="date">22 Maggio 2027</p>
+      <div style="margin-top:1rem;">
+        <svg viewBox="0 0 40 90" fill="none" stroke="currentColor" stroke-width="1.3" style="width:28px;height:55px;color:var(--sage);opacity:0.6;"><path d="M20 88 C 18 65,22 50,19 25 C 17 12,21 5,20 2"/><ellipse cx="19" cy="42" rx="4" ry="10" transform="rotate(-22 19 42)"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
